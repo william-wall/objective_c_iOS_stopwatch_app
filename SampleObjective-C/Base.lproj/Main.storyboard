@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ply-Hz-eaM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDc-C8-LOn">
+                                <rect key="frame" x="16" y="113" width="343" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="okq-j3-gUD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9C-Ut-ILA">
+                                <rect key="frame" x="69" y="339" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TmN-h7-Ue4"/>
+                                    <constraint firstAttribute="width" constant="100" id="uyk-1Y-qd3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnP-Mq-au2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Q-Dm-KbQ">
+                                <rect key="frame" x="217" y="339" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9a-xi-vIi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j9C-Ut-ILA" firstAttribute="top" secondItem="Q4Q-Dm-KbQ" secondAttribute="top" id="Dlf-OR-d1I"/>
+                            <constraint firstItem="CDc-C8-LOn" firstAttribute="trailing" secondItem="Ply-Hz-eaM" secondAttribute="trailingMargin" id="Mjw-7i-sfH"/>
+                            <constraint firstItem="CDc-C8-LOn" firstAttribute="top" secondItem="9Fn-54-F5L" secondAttribute="top" constant="113" id="OGf-OY-5rk"/>
+                            <constraint firstItem="CDc-C8-LOn" firstAttribute="leading" secondItem="Ply-Hz-eaM" secondAttribute="leadingMargin" id="PjZ-3N-me5"/>
+                            <constraint firstItem="Q4Q-Dm-KbQ" firstAttribute="leading" secondItem="j9C-Ut-ILA" secondAttribute="trailing" constant="48" id="fzH-mU-grq"/>
+                            <constraint firstItem="j9C-Ut-ILA" firstAttribute="baseline" secondItem="Q4Q-Dm-KbQ" secondAttribute="firstBaseline" id="mDO-nI-N7O"/>
+                            <constraint firstItem="9Fn-54-F5L" firstAttribute="trailing" secondItem="Q4Q-Dm-KbQ" secondAttribute="trailing" constant="58" id="pa2-mB-fft"/>
+                            <constraint firstItem="j9C-Ut-ILA" firstAttribute="leading" secondItem="9Fn-54-F5L" secondAttribute="leading" constant="69" id="wRY-h5-fY4"/>
+                            <constraint firstItem="9Fn-54-F5L" firstAttribute="bottom" secondItem="j9C-Ut-ILA" secondAttribute="bottom" constant="228" id="yfc-xs-Sc2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Fn-54-F5L"/>
+                    </view>
+                    <connections>
+                        <outlet property="resetBtn" destination="j9C-Ut-ILA" id="Ccp-fc-Wq9"/>
+                        <outlet property="startBtn" destination="Q4Q-Dm-KbQ" id="nTb-zF-XWX"/>
+                        <outlet property="timerLabel" destination="CDc-C8-LOn" id="GYY-hC-0rI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="139"/>
+        </scene>
+    </scenes>
+</document>
